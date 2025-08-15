@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        ARM_CLIENT_ID       = credentials('azure_sp_client_id')
-        ARM_CLIENT_SECRET   = credentials('azure_sp_client_secret')
-        ARM_SUBSCRIPTION_ID = credentials('azure_subscription_id')
-        ARM_TENANT_ID       = credentials('azure_tenant_id')
+        ARM_CLIENT_ID       = credentials('azure_sp_client_id_moin')
+        ARM_CLIENT_SECRET   = credentials('azure_sp_client_secret_moin')
+        ARM_SUBSCRIPTION_ID = credentials('azure_subscription_id_moin')
+        ARM_TENANT_ID       = credentials('azure_tenant_id_moin')
         TERRAFORM_VERSION   = "1.5.6"
     }
     stages {
@@ -85,4 +85,5 @@ pipeline {
         }
     }
 }
+
 
